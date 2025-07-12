@@ -35,6 +35,7 @@ public class TaskService {
             existingTask.setCompleted(taskDetails.isCompleted());
             return taskRepository.save(existingTask);
         } else {
+            System.out.println("Exception!!!!");
             throw new RuntimeException("Task not found with id: " + id);
         }
     }
